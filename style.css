@@ -44,6 +44,11 @@ a:hover {
   margin-right: 0;
 }
 
+.col {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 #currentLocation {
   border: white;
   padding: 4px;

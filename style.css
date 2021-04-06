@@ -34,7 +34,7 @@ a {
 }
 
 a:hover {
-  color: white;
+  color: skyblue;
 }
 
 .row {
@@ -106,6 +106,7 @@ input[type="submit" i]:hover {
 
 #mainBlock {
   background-image: url(morning.jpg);
+  background-size: contain;
 }
 
 .searchBar {

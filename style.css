@@ -1,5 +1,5 @@
 body {
-  background: rgb(137, 140, 150);
+  background: rgb(78, 80, 87);
 }
 
 h1 {
@@ -94,7 +94,6 @@ input[type="submit" i]:hover {
 }
 
 .container {
-  background-image: url(rain.jpg);
   background-size: cover;
   width: 35%;
   border: 1px solid white;
@@ -103,6 +102,10 @@ input[type="submit" i]:hover {
   margin-bottom: 10px;
   padding-left: 0;
   padding-right: 0;
+}
+
+#mainBlock {
+  background-image: url(morning.jpg);
 }
 
 .searchBar {

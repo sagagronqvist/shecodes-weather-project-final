@@ -1,7 +1,7 @@
 // Getting the Current Date and Time
 
 function switchDate() {
-  let dateToday = document.querySelector("li #currentDate p");
+  let dateToday = document.querySelector("#currentDate");
   currentDate.innerHTML = `${day} ${hours}:${minutes}`;
 
 }
@@ -19,6 +19,27 @@ let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "S
 let day = days[date.getDay()];
 
 switchDate();
+
+// Background Change
+
+function switchBackground() {
+
+let date = new Date();
+let hours = date.getHours();
+let image = document.getElementById("mainBlock");
+
+if(hours < 12) {
+image.style.backgroundImage = "url(morning.jpg)";
+}
+else if(hours > 11 && hours < 17) {
+image.style.backgroundImage = "url(afternoon.jpg)"; 
+}
+else {
+image.style.backgroundImage = "url(evening.jpg)";
+}
+}
+
+switchBackground();
 
 // City Input Displayed and Temperature Change
 

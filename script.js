@@ -1,11 +1,5 @@
 // Getting the Current Date and Time
 
-function switchDate() {
-  let dateToday = document.querySelector("#currentDate");
-  currentDate.innerHTML = `${day} ${hours}:${minutes}`;
-
-}
-
 let date = new Date();
 let hours = date.getHours();
 if(hours < 10) {
@@ -17,8 +11,6 @@ if(minutes < 10) {
 }
 let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 let day = days[date.getDay()];
-
-switchDate();
 
 // Background Change
 
@@ -41,7 +33,7 @@ image.style.backgroundImage = "url(evening.jpg)";
 
 switchBackground();
 
-// City Input Displayed and Temperature Change
+// City Input Displayed 
 
 function switchCity(event) {
   event.preventDefault();
@@ -56,7 +48,7 @@ function switchCity(event) {
   let form = document.querySelector("#search-form");
   form.addEventListener("submit", switchCity);
 
-   
+  // Changing Temperature and Weather Data
 
 function displayTemp (response) {
 
@@ -69,6 +61,8 @@ function displayTemp (response) {
     document.querySelector("#description").innerHTML = response.data.weather[0].description;
 
     document.querySelector("#currentWind").innerHTML = Math.round(response.data.wind.speed);
+
+    document.querySelector("#currentDate").innerHTML = `${day} ${hours}:${minutes}`;
 
     celTemp = response.data.main.temp;
 
@@ -116,7 +110,6 @@ function displayForecast(response) {
       forecastElement.innerHTML = forecastHTML;
 
       }
-
 
 //Temperature Celsius Button
 
@@ -177,5 +170,7 @@ function getCurrentPosition() {
 
 let locationButton = document.querySelector("#currentLocation");
 locationButton.addEventListener("click", getCurrentPosition);
+
+// Setting the default page to current location
 
 getCurrentPosition();
